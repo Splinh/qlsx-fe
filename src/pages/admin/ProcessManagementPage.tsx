@@ -251,9 +251,7 @@ export default function ProcessManagementPage() {
       </div>
 
       {selectedVehicleType && (
-        <div
-          style={{ display: "grid", gridTemplateColumns: "320px 1fr", gap: 24 }}
-        >
+        <div className="process-grid" style={{ display: "grid", gap: 24 }}>
           {/* Left Panel - Assembly Stages */}
           <div
             className="stitch-card"
@@ -448,7 +446,14 @@ export default function ProcessManagementPage() {
                       style={{ padding: 60 }}
                     />
                   ) : (
-                    <table className="stitch-table" style={{ width: "100%" }}>
+                    <table
+                      className="stitch-table"
+                      style={{
+                        width: "100%",
+                        display: "block",
+                        overflowX: "auto",
+                      }}
+                    >
                       <thead>
                         <tr>
                           <th style={{ width: 40 }}>#</th>
