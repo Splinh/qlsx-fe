@@ -238,7 +238,7 @@ const WorkStationPage = () => {
               <>
                 <div className="card">
                   <h3 className="font-bold text-lg mb-3">Chọn Công Đoạn</h3>
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {processes.map((p) => (
                       <button
                         key={p._id}
@@ -269,7 +269,7 @@ const WorkStationPage = () => {
                       {operations.map((op) => (
                         <div
                           key={op._id}
-                          className="operation-card available flex justify-between items-center"
+                          className="operation-card available flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2"
                         >
                           <div>
                             <div className="font-medium">{op.name}</div>
@@ -277,7 +277,7 @@ const WorkStationPage = () => {
                               ⏱️ {op.standardTime} phút
                             </div>
                           </div>
-                          <button className="bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-700">
+                          <button className="w-full sm:w-auto bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-700">
                             BẮT ĐẦU
                           </button>
                         </div>
